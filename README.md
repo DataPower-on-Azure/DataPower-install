@@ -1,10 +1,11 @@
-# Migration guide for DataPower from local deployment to conatainerized pods running on OpenShift
+# Migration guide for DataPower from local Docker deployment to conatainerized pods running on OpenShift
 
 ## Local Deployment
 
 **Pre-Reqs**
 
 1. Install [Docker](https://docs.docker.com/get-docker/) or [Podman](https://podman.io/getting-started/installation) locally on your own device.
+  - If you choose to use Podman, please change the appropriate commands below from `docker` to `podman`.
 
 **Instructions**
 
@@ -45,7 +46,7 @@
   - `docker rm DataPower`
   - `docker rmi ibmcom/datapower`
 
-##OpenShift Deployment
+## OpenShift Deployment
 
 **Pre-Reqs**
 
