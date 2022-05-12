@@ -75,8 +75,9 @@
 
 **Pre-Reqs**
 
-1. Clone and run the [datapower-operator-scripts](https://github.com/DataPower-on-Azure/datapower-operator-scripts) repo and follow its instructions to extract the necessary yaml files.
-2. An OpenShift installation on a cloud provider.
+1. An OpenShift installation on a cloud provider.
 2. Login credentials and url address to access the OpenShift UI.
 
 **Instructions**
+
+1. Clone and run the [datapower-operator-scripts](https://github.com/DataPower-on-Azure/datapower-operator-scripts) repo and follow its instructions to extract the necessary yaml files and deploy using your chosen method.
