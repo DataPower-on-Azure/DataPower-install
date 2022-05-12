@@ -16,7 +16,7 @@
   - certs
 3. Change the permissions on these sub directories.
   - Mac `chmod -R 777 config local certs`
-  - Windows `icacls config local certs /grant *S-1-1-0:F
+  - Windows `icacls config local certs /grant *S-1-1-0:F`
 4. Pull the DataPower Docker image `docker pull ibmcom/datapower`.
   - You may have to Create a [DockerID](https://hub.docker.com/).
   - And then [Login to Docker](https://docs.docker.com/engine/reference/commandline/login/).
