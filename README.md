@@ -77,7 +77,7 @@
   - In the GUI, export the zip file.
   - In the CLI enter ```write memory```
 9. Exit the datapower CLI
-  - 
+  - Type `exit` twice and then "control+C"
 11. Ensure that the config, local, and certs subdirectories are no longer empty.
 12. Stop and delete the Docker container as well as remove the pulled DataPower Docker image if you wish.
   - ```
