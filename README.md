@@ -44,6 +44,7 @@
     -p 8001:8001 \
     ibmcom/datapower
     ```
+    _Note: Exposing port 8001 is specific to the validation-flow.zip.  Expose the correct port if importing a different flow._
   - Windows (PowerShell)
     ```
     docker run -it --name datapower \
@@ -56,6 +57,7 @@
     -p 8001:8001 \
     ibmcom/datapower
     ```
+    _Note: Exposing port 8001 is specific to the validation-flow.zip.  Expose the correct port if importing a different flow._
 6. Enable the UI.
   - login: `admin`
   - Password: `admin`
@@ -74,10 +76,11 @@
 7. Access the DataPower Gateway on [https://localhost:9090](https://localhost:9090) to import the validation-flow.zip file for demo purposes.
 8. Once your configuration is complete, export the config as a zip file and save everything to your mounted volumes.
   - In the GUI, click 'Save Configuration'.
-  - In the GUI, export the zip file.
   - In the CLI enter ```write memory```
+  - Optional:
+    - In the GUI, export the zip file if any changes were made to a configuration.
 9. Exit the datapower CLI
-  - Type `exit` twice and then "control+C"
+  - Type `exit` twice and then "control+C".
 11. Ensure that the config, local, and certs subdirectories are no longer empty.
 12. Stop and delete the Docker container as well as remove the pulled DataPower Docker image if you wish.
   - ```
