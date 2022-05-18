@@ -23,7 +23,7 @@
     ```
     icacls config local certs /grant *S-1-1-0:F
     ```
-    _Note: You may have to use the full path on Windows to correctly authorize the hook to run. We haven't had the ability to test this yet._
+    _Note: You may have to use the full path on Windows to correctly change the permissions on the directories. We haven't had the ability to test this yet._
 4. Pull the DataPower Docker image .
    ```
    docker pull ibmcom/datapower
