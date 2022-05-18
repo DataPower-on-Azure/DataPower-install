@@ -53,14 +53,15 @@
   - ```
     exit
     ```
-7. Access the DataPower Gateway on [https://localhost:9090](https://localhost:9090) to import the export package that contains your DataPower configuration.
-8. Make any adjustments necessary if decoupling from a backend for testing purposes.
-9. Once your configuration is complete, export the config as a zip file and save everything to your mounted volumes.
+7. Access the DataPower Gateway on [https://localhost:9090](https://localhost:9090) to import the zip file that contains your DataPower configuration.
+  - If you need a sample zip file, you can use "validition-flow" in [datapower-operator-scripts](https://github.com/DataPower-on-Azure/datapower-operator-scripts)
+9. Make any adjustments necessary if decoupling from a backend for testing purposes.
+10. Once your configuration is complete, export the config as a zip file and save everything to your mounted volumes.
   - In the GUI, click 'Save Configuration'.
   - In the GUI, export the zip file.
   - In the CLI enter ```write memory```
-10. Ensure that the config, local, and certs subdirectories are no longer empty.
-11. Stop and delete the Docker container as well as remove the pulled DataPower Docker image if you wish.
+11. Ensure that the config, local, and certs subdirectories are no longer empty.
+12. Stop and delete the Docker container as well as remove the pulled DataPower Docker image if you wish.
   - ```
     docker stop -t 300 DataPower
     ```
