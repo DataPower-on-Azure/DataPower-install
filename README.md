@@ -30,6 +30,7 @@
   - You may have to Create a [DockerID](https://hub.docker.com/).
   - And then [Login to Docker](https://docs.docker.com/engine/reference/commandline/login/).
 5. Create and run the the DataPower container with an interactive shell from the local Docker image with volume mounts.
+  - Make sure you are in the directory that you created that contains the "config", "local", and "certs" folders.
   - ```
      docker run -it –-name DataPower \
      -v $(pwd)/config:/opt/ibm/datapower/drouter/config \
