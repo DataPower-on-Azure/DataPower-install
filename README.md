@@ -41,6 +41,7 @@
     -e DATAPOWER_ACCEPT_LICENSE="true" \
     -e DATAPOWER_INTERACTIVE="true" \
     -p 9090:9090 \
+    -p 8001:8001 \
     ibmcom/datapower
     ```
   - Windows (PowerShell)
@@ -52,6 +53,7 @@
     -e DATAPOWER_ACCEPT_LICENSE="true" \
     -e DATAPOWER_INTERACTIVE="true" \
     -p 9090:9090 \
+    -p 8001:8001 \
     ibmcom/datapower
     ```
 6. Enable the UI.
@@ -69,20 +71,20 @@
   - ```
     exit
     ```
-7. Access the DataPower Gateway on [https://localhost:9090](https://localhost:9090) to import the zip file that contains your DataPower configuration.
-  - If you need a sample zip file, you can use "validition-flow" in [datapower-operator-scripts](https://github.com/DataPower-on-Azure/datapower-operator-scripts)
-9. Make any adjustments necessary if decoupling from a backend for testing purposes.
-10. Once your configuration is complete, export the config as a zip file and save everything to your mounted volumes.
+7. Access the DataPower Gateway on [https://localhost:9090](https://localhost:9090) to import the validation-flow.zip file for demo purposes.
+8. Once your configuration is complete, export the config as a zip file and save everything to your mounted volumes.
   - In the GUI, click 'Save Configuration'.
   - In the GUI, export the zip file.
   - In the CLI enter ```write memory```
+9. Exit the datapower CLI
+  - 
 11. Ensure that the config, local, and certs subdirectories are no longer empty.
 12. Stop and delete the Docker container as well as remove the pulled DataPower Docker image if you wish.
   - ```
-    docker stop -t 300 DataPower
+    docker stop datapower
     ```
   - ```
-    docker rm DataPower
+    docker rm datapower
     ```
   - ```
     docker rmi ibmcom/datapower
