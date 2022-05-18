@@ -23,6 +23,7 @@
     ```
     icacls config local certs /grant *S-1-1-0:F
     ```
+    _Note: This is untested, but we believe it should work_
 4. Pull the DataPower Docker image .
    ```
    docker pull ibmcom/datapower
@@ -31,11 +32,23 @@
   - And then [Login to Docker](https://docs.docker.com/engine/reference/commandline/login/).
 5. Create and run the the DataPower container with an interactive shell from the local Docker image with volume mounts.
   - Make sure you are in the directory that you created that contains the "config", "local", and "certs" folders.
-  - ```
+  - Mac
+    ```
      docker run -it –-name DataPower \
      -v $(pwd)/config:/opt/ibm/datapower/drouter/config \
      -v $(pwd)/local:/opt/ibm/datapower/drouter/local \
      -v $(pwd)/certs:/opt/ibm/datapower/root/secure/usrcerts \
+     -e DATAPOWER_ACCEPT_LICENSE="true" \
+     -e DATAPOWER_INTERACTIVE="true" \
+     -p 9090:9090 \
+     ibmcom/datapower
+     ```
+  - Windows (PowerShell)
+    ```
+     docker run -it –-name DataPower \
+     -v ${PWD}/config:/opt/ibm/datapower/drouter/config \
+     -v ${PWD}/local:/opt/ibm/datapower/drouter/local \
+     -v ${PWD}/certs:/opt/ibm/datapower/root/secure/usrcerts \
      -e DATAPOWER_ACCEPT_LICENSE="true" \
      -e DATAPOWER_INTERACTIVE="true" \
      -p 9090:9090 \
