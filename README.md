@@ -34,7 +34,7 @@
   - Make sure you are in the directory that you created that contains the "config", "local", and "certs" folders.
   - Mac
     ```
-    docker run -it --name datapower \             took 7s
+    docker run -it --name datapower \
     -v $(pwd)/config:/opt/ibm/datapower/drouter/config \
     -v $(pwd)/local:/opt/ibm/datapower/drouter/local \
     -v $(pwd)/certs:/opt/ibm/datapower/root/secure/usrcerts \
