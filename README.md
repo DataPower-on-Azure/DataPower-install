@@ -55,6 +55,8 @@
     ibmcom/datapower
     ```
 6. Enable the UI.
+  - login: `admin`
+  - Password: `admin`
   - ```
     configure terminal
     ```
