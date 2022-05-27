@@ -26,7 +26,7 @@
     _Note: You may have to use the full path on Windows to correctly change the permissions on the directories. We haven't had the ability to test this yet._
 4. Pull the DataPower Docker image .
    ```
-   docker pull ibmcom/datapower
+   docker pull icr.io/integration/datapower/datapower-limited:10.0.4.0
    ```
   - You may have to Create a [DockerID](https://hub.docker.com/).
   - And then [Login to Docker](https://docs.docker.com/engine/reference/commandline/login/).
@@ -42,7 +42,7 @@
     -e DATAPOWER_INTERACTIVE="true" \
     -p 9090:9090 \
     -p 8001:8001 \
-    ibmcom/datapower
+    icr.io/integration/datapower/datapower-limited:10.0.4.0
     ```
     _Note: Exposing port 8001 is specific to the validation-flow.zip.  Expose the correct port if importing a different flow._
   - Windows (PowerShell)
@@ -55,7 +55,7 @@
     -e DATAPOWER_INTERACTIVE="true" \
     -p 9090:9090 \
     -p 8001:8001 \
-    ibmcom/datapower
+    icr.io/integration/datapower/datapower-limited:10.0.4.0
     ```
     _Note: Exposing port 8001 is specific to the validation-flow.zip.  Expose the correct port if importing a different flow._
 6. Enable the UI.
@@ -90,7 +90,7 @@
     docker rm datapower
     ```
   - ```
-    docker rmi ibmcom/datapower
+    docker rmi icr.io/integration/datapower/datapower-limited:10.0.4.0
     ```
 
 ## OpenShift Deployment
