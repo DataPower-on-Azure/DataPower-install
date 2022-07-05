@@ -6,7 +6,7 @@
 
 1. Install [Docker](https://docs.docker.com/get-docker/) or [Podman](https://podman.io/getting-started/installation) locally on your own device.
   - If you choose to use Podman, please change the appropriate commands below from `docker` to `podman`.
-
+2. Configure your [GIT_ORG](./Configuration.md)
 **Instructions**
 
 1. Create a folder for the project.
